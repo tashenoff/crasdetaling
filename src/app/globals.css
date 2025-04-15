@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 15, 15, 15;
+  --background-end-rgb: 25, 25, 25;
+  --accent-color: 234, 88, 12;
+  --accent-color-light: 249, 115, 22;
+  --dark-bg: 18, 18, 18;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      rgb(var(--background-start-rgb)),
+      rgb(var(--background-end-rgb))
+    );
+}
+
+h1, h2, h3, h4, .heading-font {
+  font-family: var(--font-oswald);
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-orange-600 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded-sm transition-colors;
+  }
+  
+  .section-padding {
+    @apply py-12 px-4 md:py-20 md:px-8;
+  }
+  
+  .container-custom {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Custom CSS for geometric elements */
+.clip-slant {
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+.clip-polygon-top {
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+.clip-polygon-bottom {
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+
+/* Swiper custom styles */
+.swiper-pagination-bullet {
+  background-color: #888 !important;
+  opacity: 0.5 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ea580c !important;
+  opacity: 1 !important;
+}
+
+.swiper-button-next:after, 
+.swiper-button-prev:after {
+  display: none !important;
+}
