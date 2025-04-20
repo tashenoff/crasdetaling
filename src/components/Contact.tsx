@@ -235,7 +235,7 @@ export default function Contact() {
               </div>
               
               {/* Social Media */}
-              <div>
+              {/* <div>
                 <h4 className="font-semibold text-xl mb-4 text-orange-500 uppercase">Мы в соцсетях</h4>
                 <div className="flex space-x-4">
                   <a href="#" className="bg-black text-orange-500 p-3 rounded-sm hover:bg-orange-900/30 transition-colors">
@@ -259,7 +259,7 @@ export default function Contact() {
                     </svg>
                   </a>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
