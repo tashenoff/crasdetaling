@@ -7,57 +7,56 @@ type WorkItem = {
   description: string;
   category: string;
   imageSrc: string;
-}
+};
 
 export default function Portfolio() {
-  // Mock data - would come from an API or CMS in a real application
   const works: WorkItem[] = [
     {
       id: 1,
       title: "Полная оклейка BMW X5",
       description: "Защитная пленка на весь кузов и детейлинг интерьера",
       category: "оклейка",
-      imageSrc: "https://placehold.co/600x400/1a1a1a/666666/png?text=BMW+X5"
+      imageSrc: "/images/okl-bmw.png"
     },
     {
       id: 2,
       title: "Детейлинг Mercedes-Benz S-Class",
       description: "Полировка кузова и нанесение керамического покрытия",
       category: "детейлинг",
-      imageSrc: "https://placehold.co/600x400/1a1a1a/666666/png?text=Mercedes"
+      imageSrc: "/images/meren.png"
     },
     {
       id: 3,
       title: "Антигравийная защита Porsche 911",
       description: "Частичная оклейка передней части автомобиля",
       category: "оклейка",
-      imageSrc: "https://placehold.co/600x400/1a1a1a/666666/png?text=Porsche"
+      imageSrc: "/images/poeshe.jpg"
     },
     {
       id: 4,
       title: "Комплексная обработка Tesla Model 3",
       description: "Полная защита автомобиля и детейлинг салона",
       category: "детейлинг",
-      imageSrc: "https://placehold.co/600x400/1a1a1a/666666/png?text=Tesla"
+      imageSrc: "/images/tesla.webp"
     },
     {
       id: 5,
       title: "Тонировка Audi Q8",
       description: "Тонировка стекол премиальной пленкой",
       category: "тонировка",
-      imageSrc: "https://placehold.co/600x400/1a1a1a/666666/png?text=Audi"
+      imageSrc: "/images/ton-audi.png"
     },
     {
       id: 6,
       title: "Защита Range Rover",
       description: "Полная оклейка кузова и реставрация салона",
       category: "оклейка",
-      imageSrc: "https://placehold.co/600x400/1a1a1a/666666/png?text=Range+Rover"
+      imageSrc: "https://images.pexels.com/photos/4889163/pexels-photo-4889163.jpeg"
     }
   ];
 
   const [filter, setFilter] = useState('все');
-  
+
   const categories = [
     { id: 'все', name: 'Все работы' },
     { id: 'оклейка', name: 'Защитная оклейка' },
@@ -65,9 +64,7 @@ export default function Portfolio() {
     { id: 'тонировка', name: 'Тонировка' }
   ];
 
-  const filteredWorks = filter === 'все' 
-    ? works 
-    : works.filter(work => work.category === filter);
+  const filteredWorks = filter === 'все' ? works : works.filter(work => work.category === filter);
 
   return (
     <section id="portfolio" className="section-padding bg-black">
@@ -81,7 +78,7 @@ export default function Portfolio() {
             Примеры наших успешно выполненных проектов
           </p>
         </div>
-        
+
         {/* Filter tabs */}
         <div className="flex flex-wrap justify-center mb-10 gap-2">
           {categories.map(category => (
@@ -89,8 +86,8 @@ export default function Portfolio() {
               key={category.id}
               onClick={() => setFilter(category.id)}
               className={`px-4 py-2 rounded-sm transition-all uppercase text-sm font-medium tracking-wide ${
-                filter === category.id 
-                  ? 'bg-orange-600 text-white shadow-md shadow-orange-900/30' 
+                filter === category.id
+                  ? 'bg-orange-600 text-white shadow-md shadow-orange-900/30'
                   : 'bg-neutral-800 text-gray-300 hover:bg-neutral-700'
               }`}
             >
@@ -98,12 +95,12 @@ export default function Portfolio() {
             </button>
           ))}
         </div>
-        
+
         {/* Portfolio grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredWorks.map(work => (
-            <div 
-              key={work.id} 
+            <div
+              key={work.id}
               className="group relative overflow-hidden rounded-md bg-neutral-800 transition-all duration-300 hover:shadow-xl hover:shadow-orange-900/20"
             >
               <div className="relative h-64 w-full overflow-hidden">

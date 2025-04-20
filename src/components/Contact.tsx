@@ -161,12 +161,12 @@ export default function Contact() {
           </div>
           
           {/* Contact Information */}
-          <div className="flex flex-col justify-between">
+          <div className="flex flex-col ">
             <div className="bg-neutral-800 p-8 rounded-lg border border-neutral-700 mb-6">
               <h3 className="text-2xl font-bold mb-6 text-orange-500 uppercase">Контактная информация</h3>
               
               <div className="space-y-6">
-                <div className="flex items-start">
+                {/* <div className="flex items-start">
                   <div className="bg-black p-3 rounded-sm mr-4">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -177,7 +177,7 @@ export default function Contact() {
                     <h4 className="font-semibold text-xl mb-1 text-white">Адрес</h4>
                     <p className="text-gray-400">г. Москва, ул. Автомобильная, 123</p>
                   </div>
-                </div>
+                </div> */}
                 
                 <div className="flex items-start">
                   <div className="bg-black p-3 rounded-sm mr-4">
