@@ -3,19 +3,31 @@ import { useState, useEffect } from 'react';
 export default function Hero() {
   const handleScrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
     e.preventDefault();
-    
+
     const section = document.getElementById(sectionId);
     if (section) {
       window.scrollTo({
-        top: section.offsetTop - 100, // Offset for header height
+        top: section.offsetTop - 100,
         behavior: "smooth"
       });
     }
   };
 
   return (
-    <section id="top" className="relative bg-gradient-to-b from-black to-neutral-900 text-white">
-      <div className="container-custom section-padding min-h-[90vh] flex flex-col justify-center relative z-10">
+    <section id="top" className="relative text-white overflow-hidden">
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
+        style={{ 
+          backgroundImage: "url('https://avtoshark.com/wp-content/uploads/2020/08/top-krasivyh-mashin-scaled.jpg')",
+          filter: "brightness(0.6) contrast(1.2)"
+        }}
+      ></div>
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/50 z-10"></div>
+
+      <div className="container-custom section-padding min-h-[90vh] flex flex-col justify-center relative z-20">
         <div className="max-w-3xl">
           <div className="inline-block bg-orange-600 px-3 py-1 mb-6 uppercase text-xs font-bold tracking-wider">
             Премиум детейлинг
@@ -44,22 +56,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      
-      {/* Overlay texture */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/40 z-0"></div>
-      
-      {/* Background image - would be replaced with actual image */}
-      <div 
-        className="absolute inset-0 bg-[url('https://placehold.co/1920x1080/111111/333333')] bg-cover bg-center bg-no-repeat z-[-1]"
-        style={{ 
-          backgroundImage: "url('https://placehold.co/1920x1080/111111/333333')",
-          filter: "brightness(0.7) contrast(1.2)"
-        }}
-      ></div>
-      
-      {/* Geometric accent */}
-      <div className="absolute bottom-0 right-0 w-full h-32 bg-gradient-to-t from-neutral-900 to-transparent z-0"></div>
-      <div className="absolute bottom-0 right-0 w-1/3 h-20 bg-orange-600 z-0 clip-slant"></div>
     </section>
   );
 }

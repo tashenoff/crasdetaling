@@ -6,7 +6,7 @@ import Services from "@/components/Services";
 import Portfolio from "@/components/Portfolio";
 import Process from "@/components/Process";
 import Testimonials from "@/components/Testimonials";
-import Instagram from "@/components/Instagram";
+
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -19,7 +19,7 @@ export default function Home() {
       <Portfolio />
       <Process />
       <Testimonials />
-      <Instagram />
+     
       <Contact />
       <Footer />
     </main>

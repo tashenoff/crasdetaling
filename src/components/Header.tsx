@@ -26,7 +26,7 @@ export default function Header() {
             onClick={(e) => handleScrollToSection(e, 'top')}
             className="font-bold text-2xl text-orange-500"
           >
-            CRAS <span className="text-white">Детейлинг</span>
+            Avtobronya.<span className="text-white">kz</span>
           </a>
         </div>
         
@@ -53,13 +53,7 @@ export default function Header() {
           >
             Процесс
           </a>
-          <a 
-            href="#instagram" 
-            onClick={(e) => handleScrollToSection(e, 'instagram')}
-            className="text-gray-300 hover:text-orange-500 transition-colors uppercase text-sm font-medium tracking-wide"
-          >
-            Instagram
-          </a>
+       
           <a 
             href="#contact" 
             onClick={(e) => handleScrollToSection(e, 'contact')}
@@ -137,13 +131,7 @@ export default function Header() {
             >
               Процесс
             </a>
-            <a 
-              href="#instagram" 
-              className="text-gray-300 hover:text-orange-500 transition-colors py-2 border-b border-gray-800 uppercase text-sm font-medium tracking-wide"
-              onClick={(e) => handleScrollToSection(e, 'instagram')}
-            >
-              Instagram
-            </a>
+          
             <a 
               href="#contact" 
               className="text-gray-300 hover:text-orange-500 transition-colors py-2 border-b border-gray-800 uppercase text-sm font-medium tracking-wide"
